@@ -1,0 +1,292 @@
+:root {
+    --color-primario: #3BBAE8;
+    --color-secundario: #29BD82;
+    --color-fondo: #111111;
+    --color-texto: #f8f9fa;
+    --color-acento: #FC7DA8;
+    --color-mostaza: #FFAB2B;
+    --color-naranja: #FC5947;
+}
+
+html body {
+    font-family: 'Syne', sans-serif !important;
+    color: var(--color-texto);
+    background-color: var(--color-fondo);
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+
+}
+
+
+/* NAVBAR */
+.navbar {
+    background-color: var(--color-fondo);
+    box-shadow: none;
+    padding: 1rem 2rem;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    margin-top: -8px;
+}
+
+.navbar .nav-link {
+    color: var(--color-texto);
+    font-weight: 600;
+    text-transform: uppercase;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+.navbar .nav-link:hover {
+    color: var(--color-primario);
+}
+
+.navbar-toggler {
+    border: none;
+    color: var(--color-texto);
+    font-size: 1.5rem;
+}
+/* Cambiar el color de cada letra de "Exponga" */
+.letra-e {
+    color: var(--color-primario);
+}
+
+.letra-x {
+    color: var(--color-acento);
+}
+
+.letra-p {
+    color: var(--color-secundario);
+}
+
+.letra-o {
+    color: var(--color-mostaza);
+}
+
+.letra-n {
+    color: var(--color-naranja);
+}
+
+.letra-g {
+    color: var(--color-primario);
+}
+
+.letra-a {
+    color: var(--color-acento);
+}
+.text-justify {
+    text-align: justify;
+}
+
+.card {
+    background-color: var(--color-fondo);
+    border: none;
+    border-radius: 0;
+}
+
+.card img {
+    border-radius: 0;
+}
+.sofa-card {
+    background-color: var(--color-fondo);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.sofa-img {
+    width: 100%;
+    height: auto; /* Fija la altura para igualar todas */
+    object-fit: cover;
+    border-radius: 8px;
+    
+
+}
+.catalogo-link {
+    color: var(--color-texto);
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+.catalogo-link:hover {
+    color: var(--color-primario);
+}
+
+.footer {
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    padding: 2rem 0;
+}
+
+.footer .logos {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+}
+
+.footer .logo-left img {
+    height: 60px;
+}
+
+.footer .logo-right img {
+    height: 60px;
+}
+
+.footer .social-icons2 {
+    display: flex;
+    gap: 20px;
+    font-size: 1.5rem;
+}
+
+.footer .social-icons2 a {
+    color: var(--color-texto);
+    transition: color 0.3s;
+}
+
+.footer .social-icons2 a:hover {
+    color: var(--color-acento);
+}
+
+.footer .info {
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    .footer .logo-left {
+        display: none;
+    }
+
+    .footer .logos {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .footer .logo-right {
+        margin-top: 1rem;
+    }
+    
+}
+
+.titulo-sillas {
+    text-align: center;
+    font-size: 2rem;
+    color: var(--color-acento);
+    margin-bottom: 2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.second-container {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 1.1rem;
+    color: var(--color-texto);
+}
+
+.second-container a {
+    color: var(--color-acento);
+    text-decoration: underline;
+}
+
+.resaltado {
+    font-weight: bold;
+    color: var(--color-acento);
+}
+@media (min-width: 992px) {
+    .navbar .navbar-brand.mx-auto {
+        margin-right: 12% !important; /* Ajusta este valor según sea necesario para alinear */
+    }
+    
+    
+}
+/* Fondo negro para el desplegable */
+@media (max-width: 991.98px) {
+  .navbar-collapse.custom-collapse {
+    position: absolute !important;
+    top: 100%;
+    left: 0;
+    background-color: var(--color-fondo);
+    width: max-content;
+    min-width: 200px;
+    padding: 1rem;
+    border-radius: 0 0 10px 10px;
+    z-index: 1050;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+    transition: none !important; /* Evita animaciones Bootstrap */
+  }
+
+  .navbar-collapse.custom-collapse.collapse:not(.show) {
+    display: none !important;
+  }
+}
+
+
+
+/* Banderas fijas solo en desktop */
+.language-flags {
+    position: fixed;
+    top: 10px;
+    /* puedes subir o bajar esto */
+    right: 15px;
+    z-index: 1050;
+    gap: 8px;
+    display: none;
+}
+
+@media (min-width: 992px) {
+    .language-flags {
+        display: flex !important;
+        top: 5px;
+        /* bajar un poco para que no esté encima de los iconos sociales */
+        right: 15px;
+    }
+}
+
+/* Iconos sociales más pequeños y con margen */
+.d-none.d-lg-flex.align-items-center.ms-3 {
+    gap: 12px;
+    margin-right: 60px;
+    /* espacio para las banderas fijas */
+}
+
+.d-none.d-lg-flex.align-items-center.ms-3 a {
+    font-size: 1.1rem;
+    /* más pequeño */
+    color: white;
+    transition: color 0.3s;
+}
+
+.d-none.d-lg-flex.align-items-center.ms-3 a:hover {
+    color: #ccc;
+}
+
+/* Tamaño banderas un poco más pequeño para que no choque */
+.language-flags a ,
+.language-flags-mobile a {
+    width: 22px;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+.language-flags-mobile a{
+    margin-left: 6%;
+}
+
+.language-flags a:hover,
+.language-flags-mobile a:hover {
+    transform: scale(1.1);
+    color: var(--color-primario);
+}
+
+.language-flags a,.language-flags-mobile a{
+    text-decoration: none;
+    color: inherit;
+}
